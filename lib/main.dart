@@ -46,34 +46,15 @@ class _SplashscreenState extends State<Splashscreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Material(
+    return Material(
       child: Column(
         children: [
+          //the children for the splashscreen goes here
           SizedBox(
-            height: 70,
-          ),
-          SizedBox(
-            width: 150,
-            child: Center(
-              child: Text(
-                'Generating Rick and Morty Characters',
-                style: TextStyle(
-                    color: Colors.green,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 40,
-          ),
-          Center(
-            child: SizedBox(
-              width: 50,
-              child: LinearProgressIndicator(
-                color: Colors.green,
-              ),
-            ),
+            height: 100,
+            width: 100,
+            child: Image.network(
+                'https://img.icons8.com/?size=160&id=udMvpkRHbzzS&format=png'),
           )
         ],
       ),

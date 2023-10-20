@@ -1,16 +1,11 @@
-# rick_and_morty
+# Rick and morty app
 
-A new Flutter project.
+Wuba luba dub dub , this is an app for all you rick and morty crack heads,
+basically it generates a rick and morty character using an API and tells you stuff bout the character aswell
 
-## Getting Started
+## Origins
+well i was randomly re-watching this rick and morty episode and the idea
+hit my head like a hammer , like bro tf? make something rick and morty related... LMAO
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# UI screenshots
+//under construction
