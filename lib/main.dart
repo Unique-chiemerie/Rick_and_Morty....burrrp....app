@@ -47,15 +47,22 @@ class _SplashscreenState extends State<Splashscreen> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Column(
+      child: Stack(
         children: [
-          //the children for the splashscreen goes here
-          SizedBox(
-            height: 100,
-            width: 100,
-            child: Image.network(
-                'https://img.icons8.com/?size=160&id=udMvpkRHbzzS&format=png'),
-          )
+          Column(
+            children: [
+              //the children for the splashscreen goes here
+              SizedBox(
+                height: 100,
+                width: 100,
+                child: Image.network(
+                    'https://img.icons8.com/?size=160&id=udMvpkRHbzzS&format=png'),
+              )
+            ],
+          ),
+          Positioned.fill(
+            child: Image.asset('images/randmBG.jpg'),
+          ),
         ],
       ),
     );
