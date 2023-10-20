@@ -3,8 +3,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:play_repo_renewed/api_handling.dart';
-import 'package:play_repo_renewed/generation.dart';
+import 'package:rick_and_morty/api_handling.dart';
+import 'package:rick_and_morty/generation.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
