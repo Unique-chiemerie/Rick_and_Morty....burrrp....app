@@ -3,8 +3,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rick_and_morty/api_handling.dart';
-import 'package:rick_and_morty/generation.dart';
+import 'package:rick_and_morty/logic/api_handling.dart';
+import 'package:rick_and_morty/logic/generation.dart';
+import 'package:rick_and_morty/screen/splashscreen_ui.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -46,26 +47,7 @@ class _SplashscreenState extends State<Splashscreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: Stack(
-        children: [
-          Column(
-            children: [
-              //the children for the splashscreen goes here
-              SizedBox(
-                height: 100,
-                width: 100,
-                child: Image.network(
-                    'https://img.icons8.com/?size=160&id=udMvpkRHbzzS&format=png'),
-              )
-            ],
-          ),
-          Positioned.fill(
-            child: Image.asset('images/randmBG.jpg'),
-          ),
-        ],
-      ),
-    );
+    return const Splashui();
   }
 }
 
