@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty/main.dart';
+
+import 'package:rick_and_morty/screen/homescreen.dart';
 
 class Genearating extends StatefulWidget {
   const Genearating({super.key});
