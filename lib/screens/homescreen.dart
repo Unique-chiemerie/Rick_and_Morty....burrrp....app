@@ -2,7 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rick_and_morty/logic/api_handling.dart';
-import 'package:rick_and_morty/logic/generation.dart';
+import 'package:rick_and_morty/screens/generation.dart';
 
 int randomgen() {
   return Random().nextInt(200) + 1;
