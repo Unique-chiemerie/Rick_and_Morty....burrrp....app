@@ -1,7 +1,7 @@
 //let's refresh on Api's
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty/screen/homescreen.dart';
-import 'package:rick_and_morty/screen/splashscreen_ui.dart';
+import 'package:rick_and_morty/screens/homescreen.dart';
+import 'package:rick_and_morty/screens/splashscreen_ui.dart';
 
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});
