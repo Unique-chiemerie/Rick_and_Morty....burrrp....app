@@ -124,7 +124,13 @@ class _ApiappState extends State<Apiapp> {
                           margin: const EdgeInsets.all(10),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: const Color.fromARGB(47, 0, 0, 0)),
+                              color: const Color.fromARGB(47, 0, 0, 0),
+                              boxShadow: const [
+                                BoxShadow(
+                                    blurRadius: 5,
+                                    color: Color.fromARGB(176, 0, 0, 0),
+                                    blurStyle: BlurStyle.outer)
+                              ]),
                           child: Center(
                             child: Text(
                               'Status of character: $status',
