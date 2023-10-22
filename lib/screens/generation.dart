@@ -31,13 +31,14 @@ class _GenearatingState extends State<Genearating> {
 
   @override
   Widget build(BuildContext context) {
-    return const Material(
+    return Material(
+      color: Colors.black,
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 70,
           ),
-          SizedBox(
+          const SizedBox(
             width: 150,
             child: Center(
               child: Text(
@@ -49,7 +50,7 @@ class _GenearatingState extends State<Genearating> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
           Center(
@@ -57,6 +58,8 @@ class _GenearatingState extends State<Genearating> {
               width: 50,
               child: LinearProgressIndicator(
                 color: Colors.green,
+                backgroundColor: Colors.white,
+                borderRadius: BorderRadius.circular(20),
               ),
             ),
           )
