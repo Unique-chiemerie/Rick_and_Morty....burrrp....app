@@ -28,6 +28,7 @@ class _ApiappState extends State<Apiapp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: Text(
           'Rick and Morty App',
@@ -48,7 +49,11 @@ class _ApiappState extends State<Apiapp> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
             ),
-            child: Pic(number: ran),
+            child: CircleAvatar(
+              radius: 100,
+              backgroundColor: Colors.black,
+              child: Pic(number: ran),
+            ),
           ),
 
           FutureBuilder(
@@ -60,70 +65,76 @@ class _ApiappState extends State<Apiapp> {
                 final status = snapshot.data!.status;
                 return SizedBox(
                   height: 500,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      const SizedBox(
-                        height: 50,
-                      ),
-                      Center(
-                        child: Text(
-                          'Character name: $charactername',
-                          style: GoogleFonts.josefinSans(
-                              fontSize: 20,
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      Center(
-                        child: Text(
-                          'Specie of character: $specie',
-                          style: GoogleFonts.josefinSans(
-                              fontSize: 20,
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      Center(
-                        child: Text(
-                          'Status of character: $status',
-                          style: GoogleFonts.josefinSans(
-                              fontSize: 20,
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 70,
-                      ),
-                      InkWell(
-                        onTap: () {
-                          fetchData(ran).then((newData) {
-                            // Update the state with the new data
-                            setState(() {
-                              futurama = Future.value(newData);
-                            });
-                          });
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const Genearating(),
-                            ),
-                          );
-                        },
-                        splashColor: Colors.green,
-                        borderRadius: BorderRadius.circular(20),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(30),
-                            color: Colors.green,
-                          ),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        const SizedBox(
                           height: 50,
-                          width: 50,
-                          child: const Icon(Icons.refresh),
                         ),
-                      ),
-                    ],
+                        Center(
+                          child: Text(
+                            'Character name: $charactername',
+                            style: GoogleFonts.josefinSans(
+                                fontSize: 20,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Center(
+                          child: Text(
+                            'Specie of character: $specie',
+                            style: GoogleFonts.josefinSans(
+                                fontSize: 20,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Center(
+                          child: Text(
+                            'Status of character: $status',
+                            style: GoogleFonts.josefinSans(
+                                fontSize: 20,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 70,
+                        ),
+                        InkWell(
+                          onTap: () {
+                            fetchData(ran).then((newData) {
+                              // Update the state with the new data
+                              setState(() {
+                                futurama = Future.value(newData);
+                              });
+                            });
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Genearating(),
+                              ),
+                            );
+                          },
+                          splashColor: Colors.green,
+                          borderRadius: BorderRadius.circular(20),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30),
+                              color: Colors.green,
+                            ),
+                            height: 50,
+                            width: 50,
+                            child: const Icon(Icons.refresh),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 );
               } else {
