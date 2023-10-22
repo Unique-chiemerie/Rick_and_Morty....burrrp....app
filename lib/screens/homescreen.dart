@@ -49,11 +49,7 @@ class _ApiappState extends State<Apiapp> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
             ),
-            child: CircleAvatar(
-              radius: 100,
-              backgroundColor: Colors.black,
-              child: Pic(number: ran),
-            ),
+            child: Pic(number: ran),
           ),
 
           FutureBuilder(
@@ -76,31 +72,67 @@ class _ApiappState extends State<Apiapp> {
                         const SizedBox(
                           height: 50,
                         ),
-                        Center(
-                          child: Text(
-                            'Character name: $charactername',
-                            style: GoogleFonts.josefinSans(
-                                fontSize: 20,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
+                        Container(
+                          height: 50,
+                          width: 300,
+                          margin: const EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: const Color.fromARGB(47, 0, 0, 0),
+                              boxShadow: const [
+                                BoxShadow(
+                                    blurRadius: 5,
+                                    color: Color.fromARGB(176, 0, 0, 0),
+                                    blurStyle: BlurStyle.outer)
+                              ]),
+                          child: Center(
+                            child: Text(
+                              'Character name: $charactername',
+                              style: GoogleFonts.josefinSans(
+                                  fontSize: 20,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
                           ),
                         ),
-                        Center(
-                          child: Text(
-                            'Specie of character: $specie',
-                            style: GoogleFonts.josefinSans(
-                                fontSize: 20,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
+                        Container(
+                          height: 50,
+                          width: 300,
+                          margin: const EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: const Color.fromARGB(47, 0, 0, 0),
+                              boxShadow: const [
+                                BoxShadow(
+                                    blurRadius: 5,
+                                    color: Color.fromARGB(176, 0, 0, 0),
+                                    blurStyle: BlurStyle.outer)
+                              ]),
+                          child: Center(
+                            child: Text(
+                              'Specie of character: $specie',
+                              style: GoogleFonts.josefinSans(
+                                  fontSize: 20,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
                           ),
                         ),
-                        Center(
-                          child: Text(
-                            'Status of character: $status',
-                            style: GoogleFonts.josefinSans(
-                                fontSize: 20,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
+                        Container(
+                          height: 50,
+                          width: 300,
+                          margin: const EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: const Color.fromARGB(47, 0, 0, 0)),
+                          child: Center(
+                            child: Text(
+                              'Status of character: $status',
+                              style: GoogleFonts.josefinSans(
+                                  fontSize: 20,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
                           ),
                         ),
                         const SizedBox(
@@ -121,16 +153,25 @@ class _ApiappState extends State<Apiapp> {
                               ),
                             );
                           },
-                          splashColor: Colors.green,
+                          splashColor: Colors.white,
                           borderRadius: BorderRadius.circular(20),
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(30),
-                              color: Colors.green,
+                              color: Colors.black,
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Colors.black,
+                                  blurRadius: 10,
+                                ),
+                              ],
                             ),
                             height: 50,
                             width: 50,
-                            child: const Icon(Icons.refresh),
+                            child: const Icon(
+                              Icons.refresh,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ],
@@ -151,7 +192,7 @@ class _ApiappState extends State<Apiapp> {
 
               return const Center(
                 child: CircularProgressIndicator(
-                  color: Colors.green,
+                  color: Colors.white,
                 ),
               );
             },
